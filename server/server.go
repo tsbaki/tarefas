@@ -29,6 +29,10 @@ func initialHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "/todos - Retrieves all todos\n")
 }
 
+/*
+* Preforms a basic status health check and if the server
+* actually contains a database ready to store our todos.
+*/
 func handlerHealthCheck(w http.ResponseWriter, r *http.Request) {
     // To be used for making sure a database actually
     // exists.
@@ -48,7 +52,14 @@ func handlerHealthCheck(w http.ResponseWriter, r *http.Request) {
     }
 }
 
+/*
+* Gets our list of TODOS
+* Sends a response back as a list of JSON objects
+*/
 func handlerTodos(w http.ResponseWriter, r *http.Request) {
+    if r.Method != "GET" {
+        return;
+    }
 }
 
 func handlerAddTodo(w http.ResponseWriter, r *http.Request) { 
@@ -68,8 +79,19 @@ func handlerAddTodo(w http.ResponseWriter, r *http.Request) {
     todos = append(todos, t)
 }
 
+func setupLogging() {
+    file, err := os.OpenFile("./LOG.txt", os.O_APPEND|
+    os.O_CREATE|os.O_WRONLY, 0666)
+    if err != nil {
+        log.Fatal(err)
+    }
+    log.SetOutput(file)
+    log.Println("Server started...")
+}
+
 func main() {
-    log.Print("Listenning on port: " + port);
+    setupLogging()
+
     http.HandleFunc("/", initialHandler)
     http.HandleFunc("/health-checker", handlerHealthCheck)
     http.HandleFunc("/todos", handlerTodos)

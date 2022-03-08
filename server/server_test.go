@@ -4,6 +4,7 @@ import (
     "net/http"
     "net/http/httptest"
     "testing"
+    "fmt"
 )
 
 func TestHandlerHealthCheck(t *testing.T) {
@@ -28,5 +29,24 @@ func TestHandlerHealthCheck(t *testing.T) {
 }
 
 func TestHandlerTodos(t *testing.T) {
-    t.Log("Test not implemented yet.")
+    req, err := http.NewRequest("GET", "/todos", nil)
+
+    if err != nil {
+        t.Fatal()
+    }
+
+    rr := httptest.NewRecorder()
+    handler := http.HandlerFunc(handlerHealthCheck)
+    handler.ServeHTTP(rr, req)
+
+    if status := rr.Code; status != http.StatusOK {
+        t.Errorf("Bad status code returned %v", status)
+    }
+
+    if rb := rr.Body.String(); len(rb) == 0 {
+        t.Errorf("Test failed: Nothing returned")
+        t.Fail()
+    } else  {
+        fmt.Println(rb)
+    }
 }

@@ -1,0 +1,23 @@
+2022/03/13 11:49:13 [INFO]: listenning on port: :8080
+2022/03/13 11:49:18 [INFO]: Adding TODO: ProjectA | This is an example TODO 
+2022/03/13 11:49:18 [INFO]: Adding TODO: ProjectA | This is another example TODO 
+2022/03/13 11:49:18 [INFO]: Adding TODO: ProjectB | This is an example TODO with another project
+2022/03/13 11:49:20 [INFO]: Adding TODO: ProjectA | This is an example TODO 
+2022/03/13 11:49:20 [ERROR]: Couldn't add TODO: It already exisists
+2022/03/13 11:49:20 [INFO]: Adding TODO: ProjectA | This is another example TODO 
+2022/03/13 11:49:20 [ERROR]: Couldn't add TODO: It already exisists
+2022/03/13 11:49:20 [INFO]: Adding TODO: ProjectB | This is an example TODO with another project
+2022/03/13 11:49:20 [ERROR]: Couldn't add TODO: It already exisists
+2022/03/13 11:49:21 [INFO]: Adding TODO: ProjectA | This is an example TODO 
+2022/03/13 11:49:21 [ERROR]: Couldn't add TODO: It already exisists
+2022/03/13 11:49:21 [INFO]: Adding TODO: ProjectA | This is another example TODO 
+2022/03/13 11:49:21 [ERROR]: Couldn't add TODO: It already exisists
+2022/03/13 11:49:21 [INFO]: Adding TODO: ProjectB | This is an example TODO with another project
+2022/03/13 11:49:21 [ERROR]: Couldn't add TODO: It already exisists
+2022/03/13 11:49:57 [INFO]: Adding TODO: ProjectA | This is an example TODO 
+2022/03/13 11:49:57 [ERROR]: Couldn't add TODO: It already exisists
+2022/03/13 11:49:57 [INFO]: Adding TODO: ProjectA | This is another example TODO 
+2022/03/13 11:49:57 [ERROR]: Couldn't add TODO: It already exisists
+2022/03/13 11:49:57 [INFO]: Adding TODO: ProjectB | This is an example TODO with another project
+2022/03/13 11:49:57 [ERROR]: Couldn't add TODO: It already exisists
+2022/03/13 11:49:57 [INFO]: Adding TODO: ProjectB | Another TODO

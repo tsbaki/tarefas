@@ -1,0 +1,14 @@
+{
+    "projectA" : {
+        "todos" : [
+            { "description" : "Test todo1" },
+            { "description" : "Test todo2" }
+        ]
+    },
+    "projectB" : {
+        "todos" : [
+            { "description" : "Test todo1" },
+            { "description" : "Test todo2" }
+        ]
+    }
+}
